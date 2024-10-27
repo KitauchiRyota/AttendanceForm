@@ -5,7 +5,7 @@ function createForm(){
   const sheet = ss.getSheetByName('フォーム作成');
 
 // プログラム2 フォームを作成し、シートオブジェクトの名前を付与
-　const formTitle = sheet.getRange('B2').getDisplayValue();
+  const formTitle = sheet.getRange('B2').getDisplayValue();
   const newForm = FormApp.create(formTitle);
 
 // プログラム3 フォームを24-リーダーMtg議事録＞席配置・出席簿＞全体Mtg出席簿に移動、回答用URLを取得
@@ -66,7 +66,7 @@ var htmlOutput = HtmlService
   SpreadsheetApp.getUi().showModelessDialog(htmlOutput, '出来たリンクをSlackに送信したよ');
 
   //プログラム9｜出力した議事録をkoala君がSlackで共有　(共通)
-  var message = formTitle　+ "\n ※全員回答です" + "\n" + tmp;
+  var message = formTitle + "\n ※全員回答です" + "\n" + tmp;
   var jsonData =
   {
      "username" : "全体Mtg出席確認Bot",
