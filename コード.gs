@@ -81,7 +81,7 @@ function createForm() {
     "payload": payload
   };
 
-  UrlFetchApp.fetch("***REMOVED***", options);
+  // UrlFetchApp.fetch("***REMOVED***", options);
 
   //Copyright © 2022 Koki Nagao. All Rights Reserved.
 }
