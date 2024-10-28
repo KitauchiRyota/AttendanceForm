@@ -81,7 +81,7 @@ function createForm() {
     "payload": payload
   };
 
-  UrlFetchApp.fetch("https://hooks.slack.com/services/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", options);
+  // UrlFetchApp.fetch("https://hooks.slack.com/services/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", options);
 
   //Copyright © 2022 Koki Nagao. All Rights Reserved.
 }
