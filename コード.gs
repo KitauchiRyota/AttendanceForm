@@ -53,6 +53,12 @@ function createForm() {
       setHelpText(formQ3help); 
   */
 
+  // プログラム1031(2024/10/30追加) ハロウィン用の質問
+  newForm.addMultipleChoiceItem()
+    .setTitle('トリックオアトリート')
+    .setChoiceValues(['トリック', 'トリート'])
+    .showOtherOption(true);
+
   // プログラム7 回答後コメントを付加し、シートオブジェクトを付与 
   const formlastmessage = sheet.getRange('B7').getDisplayValue();
   newForm.setConfirmationMessage(formlastmessage);
