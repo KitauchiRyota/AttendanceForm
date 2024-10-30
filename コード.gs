@@ -4,6 +4,9 @@ function createForm() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = ss.getSheetByName('フォーム作成');
 
+  // シートを更新
+  SpreadsheetApp.flush();
+
   // プログラム2 フォームを作成し、シートオブジェクトの名前を付与
   const formTitle = sheet.getRange('B2').getDisplayValue();
   const newForm = FormApp.create(formTitle);
@@ -55,7 +58,7 @@ function createForm() {
 
   // プログラム1031(2024/10/30追加) ハロウィン用の質問
   newForm.addMultipleChoiceItem()
-    .setTitle('トリックオアトリート')
+    .setTitle('トリック オア トリート')
     .setChoiceValues(['トリック', 'トリート'])
     .showOtherOption(true);
 
