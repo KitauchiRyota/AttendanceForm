@@ -11,7 +11,7 @@ function createForm() {
   const formTitle = sheet.getRange('B2').getDisplayValue();
   const newForm = FormApp.create(formTitle);
 
-  // プログラム3 フォームを24-リーダーMtg議事録＞席配置・出席簿＞全体Mtg出席簿に移動、回答用URLを取得
+  // プログラム3 フォームを25-リーダーMtg議事録＞席配置・出席簿＞全体Mtg出席簿に移動、回答用URLを取得
   const folderId = "***REMOVED***"
   let folder = DriveApp.getFolderById(folderId);
   let file = DriveApp.getFileById(newForm.getId())
@@ -42,7 +42,7 @@ function createForm() {
   const choose1 = sheet.getRange('E10').getDisplayValue();
   const choose2 = sheet.getRange('E11').getDisplayValue();
   const choose3 = sheet.getRange('E12').getDisplayValue();
-  //const choose4 = sheet.getRange('E13').getDisplayValue(); //春研修期間のみ
+  // const choose4 = sheet.getRange('E13').getDisplayValue(); //春研修期間のみ
   newForm.addMultipleChoiceItem().setRequired(true).
     setTitle(formQ3).
     setChoiceValues([choose1, choose2, choose3])
@@ -90,7 +90,7 @@ function createForm() {
     "payload": payload
   };
 
-  // UrlFetchApp.fetch("***REMOVED***", options);
-
+  UrlFetchApp.fetch("***REMOVED***", options);
+  //  色々いじってたら動かなくなったのでweb hookのurlを再生成しました(2024/10/30)
   //Copyright © 2022 Koki Nagao. All Rights Reserved.
 }
