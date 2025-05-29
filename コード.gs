@@ -1,4 +1,4 @@
-function createForm(){
+function createForm() {
 
   // プログラム1 スプレッドシートとシートオブジェクトを取得
   const ss = SpreadsheetApp.getActiveSpreadsheet();
@@ -56,11 +56,11 @@ function createForm(){
       setHelpText(formQ3help); 
   */
 
-  // プログラム1031(2024/10/30追加) ハロウィン用の質問
-  newForm.addMultipleChoiceItem()
-    .setTitle('トリック オア トリート')
-    .setChoiceValues(['トリック', 'トリート'])
-    .showOtherOption(true);
+  // // プログラム1031(2024/10/30追加) ハロウィン用の質問
+  // newForm.addMultipleChoiceItem()
+  //   .setTitle('トリック オア トリート')
+  //   .setChoiceValues(['トリック', 'トリート'])
+  //   .showOtherOption(true);
 
   // プログラム7 回答後コメントを付加し、シートオブジェクトを付与 
   const formlastmessage = sheet.getRange('B7').getDisplayValue();
@@ -75,7 +75,7 @@ function createForm(){
   SpreadsheetApp.getUi().showModelessDialog(htmlOutput, '出来たリンクをSlackに送信したよ');
 
   //プログラム9｜出力した議事録をkoala君がSlackで共有　(共通)
-  var message = formTitle + "\n ※全員回答です" + "\n" + tmp;
+  var message = "<" + tmp + "|" + formTitle + ">" + "\n※全員回答です";
   var jsonData =
   {
     "username": "全体Mtg出席確認Bot",
